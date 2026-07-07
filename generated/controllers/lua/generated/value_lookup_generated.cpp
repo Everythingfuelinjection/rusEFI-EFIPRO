@@ -997,6 +997,9 @@ float getConfigValueByHash(const int hash) {
 // sdCardConditionalLogging
 		case -1861088559:
 			return engineConfiguration->sdCardConditionalLogging;
+// useCompensatedMap
+		case 135376707:
+			return engineConfiguration->useCompensatedMap;
 // sdLogStartRpm
 		case 51050203:
 			return engineConfiguration->sdLogStartRpm;
@@ -2074,6 +2077,9 @@ float getConfigValueByHash(const int hash) {
 // rotationalIdleController.auto_engage_clt
 		case 602046867:
 			return engineConfiguration->rotationalIdleController.auto_engage_clt;
+// launchRpmThreshold
+		case 904813788:
+			return engineConfiguration->launchRpmThreshold;
 // misfireDetectionEnabled
 		case -2092512610:
 			return engineConfiguration->misfireDetectionEnabled;
@@ -3863,6 +3869,11 @@ bool setConfigValueByName(const char *name, float value) {
 		case -1861088559:
 	{
 		engineConfiguration->sdCardConditionalLogging = (int)value;
+		return 1;
+	}
+		case 135376707:
+	{
+		engineConfiguration->useCompensatedMap = (int)value;
 		return 1;
 	}
 		case 51050203:
@@ -5658,6 +5669,11 @@ bool setConfigValueByName(const char *name, float value) {
 		case 602046867:
 	{
 		engineConfiguration->rotationalIdleController.auto_engage_clt = (int)value;
+		return 1;
+	}
+		case 904813788:
+	{
+		engineConfiguration->launchRpmThreshold = (int)value;
 		return 1;
 	}
 		case -2092512610:
